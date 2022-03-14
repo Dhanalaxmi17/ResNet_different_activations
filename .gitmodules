@@ -1,0 +1,3 @@
+[submodule "ActivationFunctions/models/pytorch_image_models"]
+	path = ActivationFunctions/models/pytorch_image_models
+	url = ./
