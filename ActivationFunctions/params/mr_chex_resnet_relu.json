@@ -1,0 +1,23 @@
+{
+    "general": {
+        "id": "mr_chex_resnet_relu",
+        "description": "mr_0001",
+        "gpu": {
+            "gpu_id": 0
+        }
+    },
+    "dataset": {
+        "class": "chexpert",
+        "path": "/datasets/X-Ray/CheXpert/",
+        "num_workers": 0,
+        "batch_size": 48
+    },
+    "model": {
+        "class": "resnet18",
+        "activation_function": "relu"
+    },
+    "training": {
+        "learning_rate": 0.001,
+        "num_epochs": 50
+    }
+}
