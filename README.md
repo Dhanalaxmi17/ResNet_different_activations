@@ -15,7 +15,7 @@ Hard Hyperbolic Function = nn.Hardtanh(-2, 2)
 
 #  Softmax Function
 
-Softmax = nn.Softmax(dim=1), nn.Softmax2d(), nn.LogSoftmax()
+Softmax = nn.Softmax(dim=1)
 
 # Softsign
 
