@@ -216,7 +216,7 @@ while True:
                 correct += (predicted == labels).sum().item()
                 
             print('Accuracy of the model on the test images: {} %'.format(100 * correct / total))
-            wandb.log({'Accuracy': float(np.round(100 * correct / total))})
+            wandb.log({'Accuracy': float(np.round(100 * correct / total, 2))})
             # print accuracy for each class
             for classname, correct_count in correct_pred.items():
                 accuracy = 100 * float(correct_count) / total_pred[classname]
