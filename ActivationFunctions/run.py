@@ -38,7 +38,7 @@ while True:
             exit()
 
         # Hyper-parameters
-        seed=3407 #https://arxiv.org/abs/2109.08203
+        seed=3407 # try with 0, 37, 3407  #https://arxiv.org/abs/2109.08203
         num_epochs = cfg["training"]["num_epochs"]
         learning_rate = cfg["training"]["learning_rate"]
         batch_size = cfg["dataset"]["batch_size"]
@@ -53,6 +53,15 @@ while True:
         # Device configuration
         device = torch.device("cuda:{}".format(gpu_id) if torch.cuda.is_available() else "cpu")
 
+        # Setting the seed
+        np.random.seed(seed)
+        random.seed(seed)
+        torch.manual_seed(seed)
+        if torch.cuda.is_available():
+            torch.cuda.manual_seed_all(seed)
+            torch.backends.cudnn.deterministic = True
+            torch.backends.cudnn.benchmark = False
+        
         # create directory
         current_datetime = datetime.now()
         current_datetime = current_datetime.strftime("%Y%m%d_%H%M%S")
