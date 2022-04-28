@@ -49,12 +49,13 @@ Gaussian Error Linear Unit Function [GELU] = nn.GELU()
 Install [Pytorch](https://pytorch.org/get-started/locally/) 
 
 Install the following Python dependencies (with `pip install`):
+
     timm
 
     wandb
 
     torchxrayvision
-    
+
     sklearn
 
 We have also provided requirements.txt file. You can just install using this `pip install -r requirements.txt`
