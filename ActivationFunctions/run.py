@@ -147,7 +147,29 @@ while True:
 
             # Loss
             criterion = nn.CrossEntropyLoss()
+            
+        elif "mnist" in dataset.lower():
+            # MNIST dataset
+            # Image preprocessing modules
+            transform = transforms.Compose([#transforms.RandomHorizontalFlip(),
+                                            # transforms.RandomCrop(32),
+                                            # transforms.RandomRotation(10),
+                                            transforms.ToTensor()])
 
+            train_dataset = torchvision.datasets.MNIST(root="./data/",
+                                                        train=True, 
+                                                        transform=transform,
+                                                        download=True)
+
+            test_dataset = torchvision.datasets.MNIST(root="./data/",
+                                                        train=False, 
+                                                        transform=transforms.ToTensor())
+
+            classes = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
+
+            # Loss
+            criterion = nn.CrossEntropyLoss()
+            
         # Model
         model = create_model(model_str = model_name, af_str = activation_function, num_classes = len(classes))
         model.to(device)
