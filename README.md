@@ -50,8 +50,11 @@ Install [Pytorch](https://pytorch.org/get-started/locally/)
 
 Install the following Python dependencies (with `pip install`):
     timm
+
     wandb
+
     torchxrayvision
+    
     sklearn
 
 We have also provided requirements.txt file. You can just install using this `pip install -r requirements.txt`
@@ -61,8 +64,8 @@ We have also provided requirements.txt file. You can just install using this `pi
 ### Data preparation
 Download the respective datasets and add in data folder under ActivationFunctions. The links for datasets are provided here.
 
-1. [CIFAR-10] (https://www.cs.toronto.edu/~kriz/cifar.html) 
-2. [MNIST] (http://yann.lecun.com/exdb/mnist/)
+1. [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) 
+2. [MNIST](http://yann.lecun.com/exdb/mnist/)
 3. CheXpert 
 
 Then set the parameters required to train in .json files under params folder and run.
