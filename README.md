@@ -1,54 +1,47 @@
-# ResNet_different_activations
-Trying to understand the performance of various activation functions
+# Analyzing the Effect of Various Activation Functions on Diverse Datasets - A Survey
 
-# Sigmoid and its improvements
+This is an attempt made to understand the performance of various Activation Functions on different datasets. For this we have used ResNet-18 model, the datasets used are CIFAR-10, MNIST and CheXpert. 
 
-Sigmoid = nn.Sigmoid()
+We have categorised the Activation Functions based on their characteristics as :
 
-Hard Sigmoid Function = nn.Hardsigmoid()
+# Classical activation functions
 
-Sigmoid-Weighted Linear Units (SiLU) = nn.SiLU()
+1. Sigmoid = nn.Sigmoid()
 
-Hyperboilic Tangent = nn.Tanh()
+2. Hard Sigmoid Function = nn.Hardsigmoid()
 
-Hard Hyperbolic Function = nn.Hardtanh(-2, 2)
+3. Hyperboilic Tangent = nn.Tanh()
 
-#  Softmax Function
+4. Hard Hyperbolic Function = nn.Hardtanh(-2, 2)
 
-Softmax = nn.Softmax(dim=1)
+# Rectified activation functions
 
-# Softsign
+1. Rectified Linear Unit Function [ReLU] = nn.ReLU(inplace=TRUE)
 
-Softsign = nn.Softsign()
+2. LeakyReLu (LReLU) = nn.LeakyReLU(0.1)
 
-# ReLU and its improvements
+3. Parametric ReLU (PReLU) = nn.PReLU()
 
-ReLU = nn.ReLU(inplace=TRUE)
+4. Randomized ReLU (RReLU) = nn.RReLU(0.1, 0.3)
 
-LeakyReLu (LReLU) = nn.LeakyReLU(0.1)
+# Exponential activation functions
 
-Parametric ReLU (PReLU) = nn.PReLU()
+1. Exponential Linear Unit Function [ELU] = nn.ELU()
 
-Randomized ReLU (RReLU) = nn.RReLU(0.1, 0.3)
+2. Scaled Exponential Linear Units (SELU) = nn.SELU() 
 
-#  Softplus Function
+3. Continuously Differentiable Exponential Linear Unit Function [CELU] = nn.CELU() 
 
-Softplus = nn.Softplus()
+# Hybrid activation functions
 
-# ELU and its improvements
+1. Swish = nn.SiLU()
 
-ELU = nn.ELU()
+2. Hardswish = nn.Hardswish()
 
-Scaled Exponential Linear Units (SELU) = nn.SELU() 
-
-# Swish Function
-
-Hardswish = nn.Hardswish()
-
-Mish = nn.Mish()
+3. Mish = nn.Mish()
 
 # Others
 
-nn.GELU()
+Gaussian Error Linear Unit Function [GELU] = nn.GELU()
 
-nn.CELU()
+
