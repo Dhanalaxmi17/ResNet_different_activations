@@ -67,9 +67,11 @@ Download the respective datasets and add in data folder under ActivationFunction
 
 1. [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) 
 2. [MNIST](http://yann.lecun.com/exdb/mnist/)
-3. CheXpert 
+3. [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/)
 
-Then set the parameters required to train in .json files under params folder and run.
+Then set the parameters required to train in .json files under `ActivationFunctions/params` folder and run.
+
+The code for original and modified activation functions can be seen in `ActivationFunctions/models/models_activation_function_main.py`
 
 ### Training
 ` python run.py `
